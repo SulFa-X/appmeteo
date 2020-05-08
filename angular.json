@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "app-meteo": {
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "app-meteo"
+    }
+  },
+  "defaultProject": "app-meteo",
+  "cli": {
+    "analytics": "2fccc48b-6e4d-469d-b80e-7185589cbc3f"
+  }
 }
