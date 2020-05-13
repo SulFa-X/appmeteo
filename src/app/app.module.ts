@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { WeekComponent } from './week/week.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './core/layout/header/header.component';
+import { PageNotFoundComponent } from './core/layout/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WeekComponent,
-    HomePageComponent
+    HomePageComponent,
+    HeaderComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

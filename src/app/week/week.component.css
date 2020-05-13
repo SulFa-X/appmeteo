@@ -1,0 +1,12 @@
+div .days {
+    border-radius: 10px;
+    background: rgb(84, 155, 199);
+    padding: 20px;
+    width: 650px;
+    margin-top: 10px;
+}
+
+.city {
+    font-size: 20px;
+    font-weight: bold;
+}

@@ -1,3 +1,13 @@
-<p>week works!</p>
+<div *ngIf="weatherResponse$ | async as weatherResponse">
+    <p class="city">Ville : {{weatherResponse.city.name}}</p>
 
-<pre>{{forecastTable$ | async | json}}</pre>
+    <div class="days" *ngFor="let day of weatherResponse.forecast">
+        Weather : {{day.weather}}
+        Day : {{day.datetime}}
+        Pluie : {{day.rr10}} mm
+        Tmin : {{day.tmin}}
+        Tmax : {{day.tmax}}
+    </div>
+</div>
+
+<pre>{{weatherResponse$ | async | json}}</pre>

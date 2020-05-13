@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { WeekComponent } from './week/week.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { PageNotFoundComponent } from './core/layout/page-not-found/page-not-found.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'forecast',
     component: WeekComponent,
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent,
   }
 ];
 

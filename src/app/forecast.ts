@@ -1,9 +1,10 @@
-import { BrowserDynamicTestingModule } from '@angular/platform-browser-dynamic/testing';
-
 export interface Forecast {
     insee: string;
     day: number;
     weather: number;
+    rr10: number;
+    tmin: number;
+    tmax:number;
 }
 
 export interface City {
