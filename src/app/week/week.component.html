@@ -2,6 +2,7 @@
     <p class="city">Ville : {{weatherResponse.city.name}}</p>
 
     <div class="days" *ngFor="let day of weatherResponse.forecast"> 
+        
         <span [ngSwitch]="day.weather">
             <span *ngSwitchCase="'0'">
                 <img src="assets/pictos/soleil.png" alt="image" height="30" width="30"/>
@@ -126,11 +127,18 @@
             <span *ngSwitchCase="'100'">
                 <img src="assets/pictos/orage.png" alt="image" height="30" width="30"/>
             </span>
+
         </span>
         Day : {{day.datetime | date : 'EEE d'}}
-        Pluie : {{day.rr10}} mm
+        <span *ngIf="day.rr10 != 0">
+            <img src='assets/pictos/goutte.png' alt='image' height=15px width=15px/>
+            Pluie : {{day.rr10}} mm
+        </span>
+
         Tmin : {{day.tmin}}
+
         Tmax : {{day.tmax}}
+
     </div>
 </div>
 

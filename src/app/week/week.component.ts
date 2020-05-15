@@ -10,9 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class WeekComponent implements OnInit {
   weatherResponse$: Observable<WeatherResponse[]>;
-
-  picto = ["sun.png", "snow.png", "rain.png"];
-
+  
   weekDays = ['lun.' , 'mar.' , 'mer.' , 'jeu.' , 'ven.' , 'sam.' , 'dim.'];
 
   constructor(private forecastApi: ForecastApiService) { }

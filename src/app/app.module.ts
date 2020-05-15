@@ -8,6 +8,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './core/layout/header/header.component';
 import { PageNotFoundComponent } from './core/layout/page-not-found/page-not-found.component';
+import { ChartsComponent } from './charts/charts.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PageNotFoundComponent } from './core/layout/page-not-found/page-not-fou
     WeekComponent,
     HomePageComponent,
     HeaderComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ChartsComponent
   ],
   imports: [
     BrowserModule,
