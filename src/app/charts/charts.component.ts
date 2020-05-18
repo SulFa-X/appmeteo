@@ -17,9 +17,6 @@ export class ChartsComponent implements OnInit {
   chart$: Observable<{data: ChartDataSets[], labels: Label[]}>;
 
 
-
-  chart = [];
-
   constructor(private forecastApi: ForecastApiService) { }
 
   ngOnInit(): void {  
