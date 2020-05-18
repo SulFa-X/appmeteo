@@ -1,3 +1,6 @@
-<div *ngIf="chart">
-    <canvas id="canvas">{{ chart }}</canvas>
-</div>
+<canvas baseChart *ngIf="chart$ | async as chart"
+        width="400" height="400" 
+            [datasets]="lineChartData"
+            [labels]="lineChartLabels"></canvas>
+
+<pre>{{ chart$ | async | json}}</pre>

@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { WeatherResponse } from '../forecast';
 import { ForecastApiService } from '../services/forecast-api.service';
 import { Observable } from 'rxjs';
-import { Chart } from 'chart.js';
+import { map } from 'rxjs/operators'
+import { Chart, ChartDataSets } from 'chart.js';
+import { Label } from 'ng2-charts';
 import { NumberFormatStyle } from '@angular/common';
 
 @Component({
@@ -11,51 +13,32 @@ import { NumberFormatStyle } from '@angular/common';
   styleUrls: ['./charts.component.css']
 })
 export class ChartsComponent implements OnInit {
-  weatherResponse$: Observable<WeatherResponse[]>;
+
+  chart$: Observable<{data: ChartDataSets[], labels: Label[]}>;
+
 
 
   chart = [];
 
   constructor(private forecastApi: ForecastApiService) { }
 
-  ngOnInit(): void {
-    this.weatherResponse$ = this.forecastApi.fcRequest();
-
-    let temp_max = [];
-    let temp_min = [];
-    let dates = [];
-
-    this.chart = new Chart('canvas', {
-      type: 'line',
-      data: {
-        labels: dates,
-        datasets: [
-          {
-            data:temp_max,
-            borderColor: '#3cba9f',
-            fill: false
-          },
-          {
-            data: temp_min,
-            borderColor: '#ffcc00',
-            fill: false
-          }
-        ]
-      },
-      options: {
-        legend : {
-          display: false
-        },
-        scales: {
-          xAxes: [{
-            display: true
-          }],
-          yAxes: [{
-            display: true
-          }]
-        }
-      }
-    })
+  ngOnInit(): void {  
+    this.chart$ = this.forecastApi.fcRequest()
+    .pipe(
+      map(weatherResponse => {
+        const data: ChartDataSets[] = [];
+        data.push({
+          data: weatherResponse.forecast.map(item => item.tmax),
+          label: 'T° max'
+        });
+        data.push({
+          data: weatherResponse.forecast.map(item => item.tmin),
+          label: 'T° min'
+        });
+        const labels: Label[] = null;
+        return {data, labels};
+      })
+    );
   }
 
 }

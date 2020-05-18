@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './core/layout/header/header.component';
 import { PageNotFoundComponent } from './core/layout/page-not-found/page-not-found.component';
 import { ChartsComponent } from './charts/charts.component';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ChartsComponent } from './charts/charts.component';
   imports: [
     BrowserModule,
     HttpClientModule,
+    ChartsModule,
     AppRoutingModule
   ],
   providers: [],

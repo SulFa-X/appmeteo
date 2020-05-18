@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./week.component.css']
 })
 export class WeekComponent implements OnInit {
-  weatherResponse$: Observable<WeatherResponse[]>;
+  weatherResponse$: Observable<WeatherResponse>;
   
   weekDays = ['lun.' , 'mar.' , 'mer.' , 'jeu.' , 'ven.' , 'sam.' , 'dim.'];
 
