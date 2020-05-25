@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +10,7 @@ import { HeaderComponent } from './core/layout/header/header.component';
 import { PageNotFoundComponent } from './core/layout/page-not-found/page-not-found.component';
 import { ChartsComponent } from './charts/charts.component';
 import { ChartsModule } from 'ng2-charts';
+import { PictosComponent } from './pictos/pictos.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ChartsModule } from 'ng2-charts';
     HomePageComponent,
     HeaderComponent,
     PageNotFoundComponent,
-    ChartsComponent
+    ChartsComponent,
+    PictosComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,9 @@ import { ChartsModule } from 'ng2-charts';
     ChartsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    {provide: LOCALE_ID, useValue: 'fr-FR'}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { 

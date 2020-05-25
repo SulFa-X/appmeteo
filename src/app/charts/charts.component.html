@@ -1,7 +1,7 @@
-<div><canvas baseChart *ngIf="chart$ | async as chart"
-        width="400" height="400" 
+<div class='chart'><canvas baseChart *ngIf="chart$ | async as chart"
             [datasets]="chart.data"
             [labels]="chart.labels"
+            [colors]="chart.colors"
             chartType="line"></canvas>
 </div>
 

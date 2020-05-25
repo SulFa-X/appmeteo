@@ -5,6 +5,7 @@ export interface Forecast {
     rr10: number;
     tmin: number;
     tmax:number;
+    datetime: string;
 }
 
 export interface City {

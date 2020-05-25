@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "i18nLocale": "fr",
             "outputPath": "dist/app-meteo",
             "index": "src/index.html",
             "main": "src/main.ts",

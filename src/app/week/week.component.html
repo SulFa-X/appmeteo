@@ -3,142 +3,20 @@
 
     <div class="days" *ngFor="let day of weatherResponse.forecast"> 
         
-        <span [ngSwitch]="day.weather">
-            <span *ngSwitchCase="'0'">
-                <img src="assets/pictos/soleil.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'1'">
-                <img src="assets/pictos/peunuageux.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'2'">
-                <img src="assets/pictos/voile.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'3'">
-                <img src="assets/pictos/nuageux.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'4'">
-                <img src="assets/pictos/tresnuageux.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'5'">
-                <img src="assets/pictos/couvert.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'6'">
-                <img src="assets/pictos/brouillard.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'7'">
-                <img src="assets/pictos/brouillard-givrant.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'10'">
-                <img src="assets/pictos/pluiefaible.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'11'">
-                <img src="assets/pictos/pluiemoderee.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'12'">
-                <img src="assets/pictos/pluieforte.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'13'">
-                <img src="assets/pictos/verglas.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'14'">
-                <img src="assets/pictos/verglas.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'15'">
-                <img src="assets/pictos/verglas.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'16'">
-                <img src="assets/pictos/bruine.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'20'">
-                <img src="assets/pictos/neigefaible.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'21'">
-                <img src="assets/pictos/neigemoderee.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'22'">
-                <img src="assets/pictos/neigeforte.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'30'">
-                <img src="assets/pictos/pluie-neige.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'31'">
-                <img src="assets/pictos/pluie-neige.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'32'">
-                <img src="assets/pictos/pluie-neige.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'40'">
-                <img src="assets/pictos/aversefaible.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'41'">
-                <img src="assets/pictos/aversefaible.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'42'">
-                <img src="assets/pictos/averseforte.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'43'">
-                <img src="assets/pictos/aversefaible.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'44'">
-                <img src="assets/pictos/aversefaible.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'45'">
-                <img src="assets/pictos/averseforte.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'46'">
-                <img src="assets/pictos/aversefaible.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'47'">
-                <img src="assets/pictos/aversefaible.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'48'">
-                <img src="assets/pictos/averseforte.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'60'">
-                <img src="assets/pictos/averseneigefaible.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'61'">
-                <img src="assets/pictos/averseneigefaible.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'62'">
-                <img src="assets/pictos/averseneigeforte.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'63'">
-                <img src="assets/pictos/averseneigefaible.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'64'">
-                <img src="assets/pictos/averseneigefaible.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'65'">
-                <img src="assets/pictos/averseneigeforte.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'66'">
-                <img src="assets/pictos/averseneigefaible.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'67'">
-                <img src="assets/pictos/averseneigefaible.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'68'">
-                <img src="assets/pictos/averseneigeforte.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'70' || '71' || '72' || '73' || '74' || '75' || '76' || '77'|| '78'">
-                <img src="assets/pictos/averse-pluie-neige.png" alt="image" height="30" width="30"/>
-            </span>
-            <span *ngSwitchCase="'100'">
-                <img src="assets/pictos/orage.png" alt="image" height="30" width="30"/>
-            </span>
+        <app-pictos></app-pictos>
 
-        </span>
-        Day : {{day.datetime | date : 'EEE d'}}
-        <span *ngIf="day.rr10 != 0">
-            <img src='assets/pictos/goutte.png' alt='image' height=15px width=15px/>
-            Pluie : {{day.rr10}} mm
-        </span>
-
+        {{day.datetime | date : 'EEE d'}}
+        
+      
+            <span *ngIf="day.rr10 != 0">
+                <img src='assets/pictos/goutte.png' alt='image' height=15px width=15px/>
+                Pluie : {{day.rr10}} mm
+            </span>
+        
+        
         Tmin : {{day.tmin}}
 
         Tmax : {{day.tmax}}
-
     </div>
 </div>
 

@@ -4,7 +4,7 @@ import { ForecastApiService } from '../services/forecast-api.service';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators'
 import { Chart, ChartDataSets } from 'chart.js';
-import { Label } from 'ng2-charts';
+import { Label, Color } from 'ng2-charts';
 import { NumberFormatStyle } from '@angular/common';
 
 @Component({
@@ -15,7 +15,6 @@ import { NumberFormatStyle } from '@angular/common';
 export class ChartsComponent implements OnInit {
 
   chart$: Observable<{data: ChartDataSets[], labels: Label[]}>;
-
 
   constructor(private forecastApi: ForecastApiService) { }
 
@@ -32,10 +31,11 @@ export class ChartsComponent implements OnInit {
           data: weatherResponse.forecast.map(item => item.tmin),
           label: 'T° min'
         });
-        const labels: Label[] = null;
+        const labels: Label[] = weatherResponse.forecast.map(item => item.datetime);
         return {data, labels};
       })
     );
   }
 
 }
+
