@@ -3,9 +3,10 @@ import { WeatherResponse } from '../forecast';
 import { ForecastApiService } from '../services/forecast-api.service';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators'
-import { Chart, ChartDataSets } from 'chart.js';
+import { Chart, ChartDataSets, ChartOptions } from 'chart.js';
 import { Label, Color } from 'ng2-charts';
 import { NumberFormatStyle } from '@angular/common';
+import { componentFactoryName } from '@angular/compiler';
 
 @Component({
   selector: 'app-charts',
@@ -25,13 +26,27 @@ export class ChartsComponent implements OnInit {
         const data: ChartDataSets[] = [];
         data.push({
           data: weatherResponse.forecast.map(item => item.tmax),
-          label: 'T° max'
+          label: 'T° max',
+          fill: false,
+          borderColor:  'rgba(255, 0, 0, 0.8)'
         });
         data.push({
           data: weatherResponse.forecast.map(item => item.tmin),
-          label: 'T° min'
+          label: 'T° min',
+          fill: false,
+          borderColor:  'rgba(0, 0, 255, 0.8)'
         });
-        const labels: Label[] = weatherResponse.forecast.map(item => item.datetime);
+        const labels: Label[] = weatherResponse.forecast.map(item => { const date = new Date(item.datetime);
+                                                                        return date.toLocaleDateString('fr-FR', {weekday: 'short', day: 'numeric'}) } );
+        const options: ChartOptions = {
+          responsive: true,
+          legend: {
+            labels: {
+              fontColor: 'rgba(255,0,0,0.9)'
+            }
+          }
+        }
+        
         return {data, labels};
       })
     );

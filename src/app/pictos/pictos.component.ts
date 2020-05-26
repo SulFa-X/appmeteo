@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Observable } from 'rxjs';
-import { WeatherResponse } from '../forecast';
+import { WeatherResponse, Forecast } from '../forecast';
 import { ForecastApiService } from '../services/forecast-api.service';
 
 @Component({
@@ -11,11 +11,11 @@ import { ForecastApiService } from '../services/forecast-api.service';
 export class PictosComponent implements OnInit {
   weatherResponse$: Observable<WeatherResponse>;
 
-
-  constructor(private forecastApi: ForecastApiService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.weatherResponse$ = this.forecastApi.fcRequest();
   }
+
+  @Input() forecast: Forecast;
 
 }

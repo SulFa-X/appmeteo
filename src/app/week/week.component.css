@@ -12,13 +12,29 @@ div .days {
 }
 
 div div .date {
-    position: relative;
+    padding: 15px;
+    display: inline-block;
+    width: 60px;
 }
 
 div div .rain {
-    position: relative;
+    padding: 15px;
+    display: inline-block;
+    width: 130px;
+    font-size: 15px;
+    font-style: italic;
 }
 
-div div .date {
-    position: relative;
+div div .tmin {
+    padding: 15px;
+    display: inline-block;
+    width: 70px;
+    border: 2px solid rgba(0, 0, 255, 0.8);
+}
+
+div div .tmax {
+    padding: 15px;
+    display: inline-block;
+    width: 73px;
+    border: 2px solid rgba(250, 5, 5, 0.6);
 }

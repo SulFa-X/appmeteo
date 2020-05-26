@@ -5,18 +5,19 @@
         
         <app-pictos></app-pictos>
 
-        {{day.datetime | date : 'EEE d'}}
+        <div class="date">{{day.datetime | date : 'EEE d'}}</div>
         
-      
+        <div class="rain">
             <span *ngIf="day.rr10 != 0">
                 <img src='assets/pictos/goutte.png' alt='image' height=15px width=15px/>
                 Pluie : {{day.rr10}} mm
             </span>
+        </div>
         
         
-        Tmin : {{day.tmin}}
+        <div class="tmin">Tmin : {{day.tmin}}</div>
 
-        Tmax : {{day.tmax}}
+        <div class="tmax">Tmax : {{day.tmax}}</div>
     </div>
 </div>
 
