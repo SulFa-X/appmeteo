@@ -13,6 +13,7 @@ import { ChartsModule } from 'ng2-charts';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { ClarityModule } from "@clr/angular";
 import { PictosComponent } from './pictos/pictos.component';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { PictosComponent } from './pictos/pictos.component';
     ChartsModule,
     BrowserAnimationsModule,
     ClarityModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'fr-FR'}
