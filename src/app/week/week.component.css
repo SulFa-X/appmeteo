@@ -1,14 +1,19 @@
+.page {
+    padding-left: 15px;
+}
+
 div .days {
     border-radius: 10px;
     background: rgb(84, 155, 199);
     padding: 20px;
-    width: 650px;
+    width: 520px;
     margin-top: 10px;
 }
 
 .city {
     font-size: 20px;
     font-weight: bold;
+    color: white;
 }
 
 div div .date {
@@ -28,13 +33,13 @@ div div .rain {
 div div .tmin {
     padding: 15px;
     display: inline-block;
-    width: 70px;
+    width: 100px;
     border: 2px solid rgba(0, 0, 255, 0.8);
 }
 
 div div .tmax {
     padding: 15px;
     display: inline-block;
-    width: 73px;
+    width: 100px;
     border: 2px solid rgba(250, 5, 5, 0.6);
 }

@@ -16,6 +16,6 @@ export class PictosComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  @Input() forecast: Forecast;
+  @Input() code: number;
 
 }

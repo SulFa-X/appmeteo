@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators'
 import { Chart, ChartDataSets, ChartOptions } from 'chart.js';
 import { Label, Color } from 'ng2-charts';
 import { NumberFormatStyle } from '@angular/common';
-import { componentFactoryName } from '@angular/compiler';
+import { componentFactoryName, BoundElementProperty } from '@angular/compiler';
 
 @Component({
   selector: 'app-charts',
@@ -16,6 +16,44 @@ import { componentFactoryName } from '@angular/compiler';
 export class ChartsComponent implements OnInit {
 
   chart$: Observable<{data: ChartDataSets[], labels: Label[]}>;
+
+  options: ChartOptions = {
+    responsive: true,
+    legend: {
+      labels: {
+        fontColor: 'rgba(0,255,0,0.9)'
+      }
+    },
+    scales: {
+      xAxes: [
+          {
+              ticks: {
+                  fontColor: 'rgba(25, 25, 25, 0.9)'
+              },
+              scaleLabel: {
+                  display: true,
+                  labelString: 'Jour',
+                  fontColor: 'rgba(25, 25, 25, 0.5)'
+              }
+          }
+      ],
+      yAxes: [
+          {
+              ticks: {
+                  callback: function(label, index, labels) {
+                      return label + '°C';
+                  },
+                  fontColor: 'rgba(0, 0, 0, 0.9)'
+              },
+              scaleLabel: {
+                  display: true,
+                  labelString: 'Température',
+                  fontColor: 'rgba(0, 0, 0, 0.5)'
+              }
+          }
+      ]
+    }
+  }
 
   constructor(private forecastApi: ForecastApiService) { }
 
@@ -38,15 +76,6 @@ export class ChartsComponent implements OnInit {
         });
         const labels: Label[] = weatherResponse.forecast.map(item => { const date = new Date(item.datetime);
                                                                         return date.toLocaleDateString('fr-FR', {weekday: 'short', day: 'numeric'}) } );
-        const options: ChartOptions = {
-          responsive: true,
-          legend: {
-            labels: {
-              fontColor: 'rgba(255,0,0,0.9)'
-            }
-          }
-        }
-        
         return {data, labels};
       })
     );

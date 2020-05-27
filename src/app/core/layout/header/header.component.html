@@ -1,8 +1,17 @@
-<div class="header">
-    <nav>
-        <a [routerLink]="['/home']" routerLinkActive="active">Accueil</a>
-        <a [routerLink]="['/forecast']" routerLinkActive="active">Prévisions</a>
-        <a [routerLink]="['/graph']" routerLinkActive="active">Courbes</a>
-    </nav>
-    <h1>App Météo</h1>
-</div>
+<header class="header-6">
+    <div class="branding">
+        <a href="/home" class="nav-link">
+            <clr-icon shape="sun" class="is-solid" class="is-warning"></clr-icon>
+            <span class="title">App Météo</span>
+        </a>
+    </div>
+    <div class="header-nav">
+        <a href="/forecast" class="nav-link nav-text">Prévisions</a>
+        <a href="/graph" class="nav-link nav-text">Courbes</a>
+    </div>
+    <div class="header-actions">
+        <a href="/home" class="nav-link nav-icon" aria-label="settings">
+            <clr-icon shape="home"></clr-icon>
+        </a>
+    </div>
+</header>

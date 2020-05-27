@@ -1,6 +1,6 @@
-<div *ngIf="weatherResponse$ | async as weatherResponse">
+<div class="pictos">
 
-<span [ngSwitch]="forecast.weather">
+<span [ngSwitch]="code">
     <span *ngSwitchCase="0">
         <img src="assets/pictos/soleil.png" alt="image" height="30" width="30"/>
     </span>

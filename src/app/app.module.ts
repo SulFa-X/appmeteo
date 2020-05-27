@@ -10,6 +10,8 @@ import { HeaderComponent } from './core/layout/header/header.component';
 import { PageNotFoundComponent } from './core/layout/page-not-found/page-not-found.component';
 import { ChartsComponent } from './charts/charts.component';
 import { ChartsModule } from 'ng2-charts';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { ClarityModule } from "@clr/angular";
 import { PictosComponent } from './pictos/pictos.component';
 
 @NgModule({
@@ -26,6 +28,8 @@ import { PictosComponent } from './pictos/pictos.component';
     BrowserModule,
     HttpClientModule,
     ChartsModule,
+    BrowserAnimationsModule,
+    ClarityModule,
     AppRoutingModule
   ],
   providers: [

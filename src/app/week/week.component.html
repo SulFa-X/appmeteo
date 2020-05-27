@@ -1,9 +1,9 @@
-<div *ngIf="weatherResponse$ | async as weatherResponse">
+<div class="page" *ngIf="weatherResponse$ | async as weatherResponse">
     <p class="city">Ville : {{weatherResponse.city.name}}</p>
 
     <div class="days" *ngFor="let day of weatherResponse.forecast"> 
         
-        <app-pictos></app-pictos>
+        <app-pictos [code]="day.weather"></app-pictos>
 
         <div class="date">{{day.datetime | date : 'EEE d'}}</div>
         
@@ -20,5 +20,3 @@
         <div class="tmax">Tmax : {{day.tmax}}</div>
     </div>
 </div>
-
-<pre>{{weatherResponse$ | async | json}}</pre>

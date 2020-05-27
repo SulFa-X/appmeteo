@@ -1,9 +1,6 @@
 <div class='chart'><canvas baseChart *ngIf="chart$ | async as chart"
             [datasets]="chart.data"
             [labels]="chart.labels"
-            [colors]="chart.colors"
-            [options]="chart.options"
+            [options]="options"
             chartType="line"></canvas>
 </div>
-
-<pre>{{ chart$ | async | json}}</pre>
