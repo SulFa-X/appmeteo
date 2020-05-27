@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1590589957194,
+  "timestamp": 1590590926482,
   "index": "/appmeteo/index.html",
   "assetGroups": [
     {
@@ -10,8 +10,8 @@
       "urls": [
         "/appmeteo/favicon.ico",
         "/appmeteo/index.html",
-        "/appmeteo/main-es2015.028b758ceac418f27e42.js",
-        "/appmeteo/main-es5.028b758ceac418f27e42.js",
+        "/appmeteo/main-es2015.c7f8a9d1779dd50c72ce.js",
+        "/appmeteo/main-es5.c7f8a9d1779dd50c72ce.js",
         "/appmeteo/manifest.webmanifest",
         "/appmeteo/polyfills-es2015.25f92db1ed9a78b50ee0.js",
         "/appmeteo/polyfills-es5.cca4de9566c747308bb5.js",
@@ -27,6 +27,7 @@
       "installMode": "lazy",
       "updateMode": "prefetch",
       "urls": [
+        "/appmeteo/assets/icon.png",
         "/appmeteo/assets/icons/icon-128x128.png",
         "/appmeteo/assets/icons/icon-144x144.png",
         "/appmeteo/assets/icons/icon-152x152.png",
@@ -63,6 +64,7 @@
   ],
   "dataGroups": [],
   "hashTable": {
+    "/appmeteo/assets/icon.png": "32b53ef106634b92016b92e93dfbe76aba154bfe",
     "/appmeteo/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
     "/appmeteo/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
     "/appmeteo/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
@@ -94,9 +96,9 @@
     "/appmeteo/assets/pictos/verglas.png": "7bce418ca0009d063498fe334017a6640208133e",
     "/appmeteo/assets/pictos/voile.png": "b97c6980227b6772705ec8ada0dc656ff33b16a0",
     "/appmeteo/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/appmeteo/index.html": "7cbe123abfcfbeabbbc469f74b48b6affd2408ba",
-    "/appmeteo/main-es2015.028b758ceac418f27e42.js": "111b615e6f7b4a48239623f3280b79ffb4016852",
-    "/appmeteo/main-es5.028b758ceac418f27e42.js": "1bd0e50464d7f38452dabfd5443f3b3e7de65f38",
+    "/appmeteo/index.html": "f23d7ae4c417df07fd6d88b4be83ac6157ae0fae",
+    "/appmeteo/main-es2015.c7f8a9d1779dd50c72ce.js": "3396ee18f13378cfaf15777fe926345f6b248159",
+    "/appmeteo/main-es5.c7f8a9d1779dd50c72ce.js": "bb5caaeaa665f8e53f7f6b7a427b31d52724a005",
     "/appmeteo/manifest.webmanifest": "0b5db547df3e97e98a87a6733de6a569ceb63b80",
     "/appmeteo/polyfills-es2015.25f92db1ed9a78b50ee0.js": "72ad4ccc0a3916ae4598199447cdeadd6d380570",
     "/appmeteo/polyfills-es5.cca4de9566c747308bb5.js": "87006d1f609b94ee122cc7790b1ddb5e03d8eaa6",
